@@ -1,0 +1,46 @@
+SYNCHRONISATION(s,T1,T2,F1,fa,fb,fc)
+
+A.Initialise a semaphore with variable s
+B.Initialise the thread T1 with T1
+C.Initialise the thread T2 with T2
+D.Creation of thread T1 for F1
+E.print=Thread T1 created
+F.Join thread T1 for F1
+G.print=Thread T2 is calling fa
+H.Creation of thread T2 for fa
+I.Join thread T2 for fa
+J.print=Thread T1 is calling fb
+K.Creation of thread T1 for fb
+L.Join thread T1 for fb
+M.print=Thread T2 is calling fc
+N.Creation of thread T2 for fc
+O.Join thread T2 for fc
+
+F1
+A.semaphore wait s //decrement the value of s
+B.print=F1 running by thread T1
+C.Initialise the variable of thread T2
+D.print=Thread T2 created
+E.Creation of thread T2 for F2
+F.print= Thread T2 created.
+G.semaphore post s //decrement the value of s
+
+F2
+A. semaphore wait s //decrement the value of s
+B. print=F2 ran by thread T2
+C. semaphore post s//increment the value of s
+
+fa
+A.semaphore wait s //decrement the value of s
+B.print=this is fa
+C.semaphore post s //increment the value of s
+
+fb
+A.semaphore wait s//decrement the value of s
+B.print=this is fb
+C.semaphore post s //decrement the value of s
+
+fc
+A.semaphore wait s //decrement the value of s
+B.print=this is fc
+C.semaphore post s //decrement the value of s
